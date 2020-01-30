@@ -14,10 +14,10 @@ public class ClientTest {
         MongoDatabase database = mongoClient.getDatabase("test");
         MongoCollection<Document> testCol = database.getCollection("test_col");
         Document document = new Document("name", "Udipi")
-                .append("contact", new Document("phone", "001-555-0149")
+                .append("contact", new Document("phone", "001-444-0149")
                         .append("email", "udipi@example.com")
-                        .append("location", Arrays.asList(-173.92502, 140.8279556)))
-                .append("stars", 5)
+                        .append("location", Arrays.asList(-177.92502, 110.8279556)))
+                .append("stars", 4)
                 .append("categories", Arrays.asList("Food", "Restaurant", "Fast Food"));
 
         testCol.insertOne(document);
